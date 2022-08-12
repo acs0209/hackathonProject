@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'bootstrap/css/styles.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/54ae93b2e8.js" crossorigin="anonymous"></script>
+        <script src="{% static 'bootstrap/js/index.js' %}" defer></script>
+    </head>
+    <body>
+        
+      <nav class="navbar">
+          <div class="nav_menu1" onclick="doDisplay1()">
+              <i class="fab fa-accusoft"></i>
+              <a href="#">HOME</a>
+          </div>
+          <ul class="navbar_menu">
+              <li class="nav_menu2" onclick="doDisplay4()"><a href="#">회원가입</a></li>
+              <li class="nav_menu3" onclick="doDisplay3()"><a href="#">로그인</a></li>
+              <li class="nav_menu4" onclick="doDisplay2()"><a href="{% url 'photo_list' %}">사진</a></li>
+              <li class="nav_menu5" onclick="doDisplay1()"><a href="#">메모</a></li>
+          </ul>
+          <ul class="navbar_icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+          </ul>
+          <a href="#" class="navbar_toogleBtn">
+              <i class="fa-solid fa-bars"></i>
+          </a>
+      </nav>
+
+
+        <!-- Header-->
+      <header class="bg-dark py-5">
+          <div class="container px-4 px-lg-5 my-5">
+              <div class="text-center text-white">
+                  <h1 class="display-4 fw-bolder">Diary in style</h1>
+                  <p class="lead fw-normal text-white-50 mb-0">With this diary hompeage template</p>
+              </div>
+          </div>
+      </header>
+
+      <div id="main">
+
+        <div id="memo_list">
+          <img class="memo" src="{% static 'bootstrap/images/memo.jpg' %}" width="450">
+          <ul class="list1">
+            <li>자신의 할일을 적기</li>
+            <li>할일을 다하면 체크하기</li>
+            <li>체크하면 바의 게이지수가 채워짐</li>
+            <li>게이지수가 다 채워지면 100% 달성!</li>
+          </ul>
+        </div>
+        
+        <div id="photo_list">
+          <img class="photo" src="{% static 'bootstrap/images/photo.jpg' %}" width="450">
+          <ul class="list2">
+            <li>사진올리기</li>
+            <li>사진 밑에 자신의 해시태그 적기</li>
+            <li>기타</li>
+            <li>기타</li>
+            <li>기타</li>
+          </ul>
+        </div>
+      </div>
+
+
+    </body>
+</html>
