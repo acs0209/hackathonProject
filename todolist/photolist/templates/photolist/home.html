@@ -1,5 +1,5 @@
 {% load static %}
-<!-- commit test -->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,16 +9,14 @@
         <link rel="stylesheet" href="{% static 'bootstrap/css/styles.css' %}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/54ae93b2e8.js" crossorigin="anonymous"></script>
-        <script src="{% static 'bootstrap/js/index.js' %}" defer></script>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        
+
+      <!-- navbar -->
       <nav class="navbar">
           <div class="nav_menu1" onclick="doDisplay1()">
-              <i class="fab fa-accusoft"></i>
-              <a href="#">HOME</a>
+              <a href="index.html">HOME</a>
           </div>
           <ul class="navbar_menu">
               <li class="nav_menu2" onclick="doDisplay4()"><a href="#">회원가입</a></li>
@@ -34,9 +32,9 @@
               <i class="fa-solid fa-bars"></i>
           </a>
       </nav>
+      <!-- navbar -->
 
-
-        <!-- Header-->
+      <!-- Header -->
       <header class="bg-dark py-5">
           <div class="container px-4 px-lg-5 my-5">
               <div class="text-center text-white">
@@ -45,7 +43,9 @@
               </div>
           </div>
       </header>
+      <!-- Header -->
 
+      <!-- Main -->
       <div id="main">
 
         <div id="memo_list">
@@ -68,8 +68,11 @@
             <li>기타</li>
           </ul>
         </div>
+
       </div>
 
-
+      <!-- Main -->
+      <script src="https://kit.fontawesome.com/54ae93b2e8.js" crossorigin="anonymous"></script>
+      <script src="{% static 'bootstrap/js/index.js' %}" defer></script>
     </body>
 </html>
