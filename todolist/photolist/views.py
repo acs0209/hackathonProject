@@ -5,3 +5,6 @@ def photo_list(request):
 
 def home(request):
     return render(request, 'photolist/home.html')
+
+def account(request):
+    return render(request, 'photolist/account.html')

@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>{% block title %}{% endblock title %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'bootstrap/css/styles.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="nav_menu1" onclick="doDisplay1()">
+            <a href="index.html">HOME</a>
+        </div>
+        <ul class="navbar_menu">
+            <li class="nav_menu2" onclick="doDisplay4()"><a href="#">회원가입</a></li>
+            <li class="nav_menu3" onclick="doDisplay3()"><a href="#">로그인</a></li>
+            <li class="nav_menu4" onclick="doDisplay2()"><a href="{% url 'photo_list' %}">사진</a></li>
+            <li class="nav_menu5" onclick="doDisplay1()"><a href="#">메모</a></li>
+        </ul>
+        <ul class="navbar_icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </ul>
+        <a href="#" class="navbar_toogleBtn">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </nav>
+    <!-- navbar -->
+
+    {% block content %}
+    {% endblock content %}
+    <hr/>
+
+
+    <!-- Footer -->
+    <div>
+        &copy; LikelionHackaton.강원대학교
+    </div>
+
+    </body>
+</html>
