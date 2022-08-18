@@ -7,9 +7,9 @@ from django.views.generic import RedirectView
 urlpatterns = [
     path('', RedirectView.as_view(
         pattern_name = 'photolist:photo_list' 
-    ), name='root'),    # url이 빈공간일 때 photolist앱에서 url name인 photo_list로 /home/photolist 로 감
+    ), name='root'),    # url이 빈공간일 때 photolist앱에서 url name인 photo_list로 /photolist 로 감
     path('admin/', admin.site.urls),
-    path('home/', include('photolist.urls')),
+    path('photolist/', include('photolist.urls')),
 ]
 
 

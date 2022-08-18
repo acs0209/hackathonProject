@@ -11,72 +11,24 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> -->
-        <link rel="stylesheet" href="{% static 'bootstrap-5.2.0-dist/css/bootstrap.css' %}" />
+        <link rel="stylesheet" href="{% static 'bootstrap-4.6.2-dist/css/bootstrap.min.css' %}" />
         <script src="{% static 'jquery-3.6.0.min.js' %}"></script>
-        <script src="{% static 'bootstrap-5.2.0-dist/js/bootstrap.js' %}"></script>
-        <style>
-            body {
-                padding-top: 5rem;
-                padding-bottom: 2rem;
-            }
-        </style>
+        <script src="{% static 'bootstrap-4.6.2-dist/js/bootstrap.min.js' %}"></script>
+        <link rel="stylesheet" href="{% static "css/photo_board.css" %}">
     </head>
 
     <body>
-
     <!-- navbar -->
-    <!-- <nav class="navbar">
-        <div class="nav_menu1" onclick="doDisplay1()">
-            <a href="index.html">HOME</a>
-        </div>
-        <ul class="navbar_menu">
-            <li class="nav_menu2" onclick="doDisplay4()"><a href="#">회원가입</a></li>
-            <li class="nav_menu3" onclick="doDisplay3()"><a href="#">로그인</a></li>
-            <li class="nav_menu4" onclick="doDisplay2()"><a href="{% url 'photolist:photo_list' %}">사진</a></li>
-            <li class="nav_menu5" onclick="doDisplay1()"><a href="#">메모</a></li>
-        </ul>
-        <ul class="navbar_icons">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-        </ul>
-        <a href="#" class="navbar_toogleBtn">
-            <i class="fa-solid fa-bars"></i>
-        </a>
-    </nav> -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="{% url 'photolist:photo_list' %}">Fixed navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              {% if not user.is_authenticated %}
-                <li class="nav-item">
-                  <a class="nav-link" href="#">회원가입</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">로그인</a>
-                </li>
-              {% else %}
-                <li class="nav-item">
-                  <a class="nav-link" href="#">프로필</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">로그아웃</a>
-                </li>
-              {% endif %}     
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-    </nav>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+      <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="#">Features</a>
+        <a class="p-2 text-dark" href="#">Enterprise</a>
+        <a class="p-2 text-dark" href="#">Support</a>
+        <a class="p-2 text-dark" href="#">Pricing</a>
+      </nav>
+      <a class="btn btn-outline-primary" href="#">Sign up</a>
+    </div>
     <!-- navbar -->
 
     {% block content %}
