@@ -1,0 +1,19 @@
+{% extends "photolist/layout.html" %}
+{% load bootstrap4 %}
+{% block title %}
+    new
+{% endblock title %}
+{% block content %}
+
+    <!-- Post Detail pk#{{ post.pk }} -->
+    <form action="" method="post" enctype="multipart/form-data"></form>
+        {% csrf_token %}
+        {% bootstrap_form form %}
+
+        {% buttons %}
+            <!-- <input type="submit" value="저장" class="" /> -->
+            <button class="btn btn-primary">
+                저장
+            </button>
+        {% endbuttons %}
+{% endblock content%}
