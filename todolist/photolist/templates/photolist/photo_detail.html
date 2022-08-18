@@ -5,11 +5,16 @@
   photo_detail
 {% endblock title %}
 
+{% block head %}
+    <link rel="stylesheet" href="{% static "css/instagram.css" %}">
+{% endblock head %}
+
+
 {% block content %}
     <!-- instagram-content -->
     <div class="instagram-card">
         <div class="instagram-card-header">
-            <img src="{% staitc "images/photo.jpg" %}" class="instagram-card-user-image"/>
+            <img src="{% static "images/photo.jpg" %}" class="instagram-card-user-image"/>
             <a class="instagram-card-user-name" href="#">followmeto</a>
             <div class="instagram-card-time">58 min</div>
         </div>

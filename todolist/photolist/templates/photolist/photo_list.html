@@ -6,11 +6,18 @@
 {% endblock title %}
 
 {% block content %}
-    <!-- login -->
+    <!-- header -->
     <header id="header">
         <div class="container1">
-            <div class="map">
+            <!-- info -->
+            <div id="info">         
+                <img class="gomduli_cheeze" src="{% static "images/gomduli_cheeze.jpg" %}">
+                <div class="info">
+                    <h4 class="info_header">강원대학교 근처 맛집 <br>강맛</h4>
+                    <p class="info_content">곰두리들도 인정할 만한 당신만의 맛집들을 기록하세요.</p>
+                </div>
             </div>
+            <!-- login -->
             <div class="login">
                 <h2 class="blind">로그인</h2>
                 <p class="login_msg">이 사이트를 더 안전하고 편리하게 이용하세요</p>
@@ -32,7 +39,7 @@
             </div>
         </div>
     </header>        
-    <!-- login -->
+    <!-- header -->
 
     <!-- header -->
     <header id="top_container">
@@ -43,34 +50,42 @@
         </div>
     </header>
     <!-- header -->
+    
+    <!-- best_container -->
+
+    <!-- 여기에 맛집 top3을 넣어야 합니다. -->
 
     <!-- best_container -->
-        {% for post in photo_list %}
-            <tr>
-                <td>
-                    {{ post.pk }}
-                </td>
-                <td>
-                    {% if post.photo %}
-                        <img src="{{ post.photo.url }}"/>
-                    {% else %}
-                        No Photo
-                    {% endif %}
-                </td>
-                <td>
-                    <a href="{{ post.get_absolute_url }} ">
-                        {{ post.title }}
-                    </a>
-                </td>
-            </tr>
-            {% endfor %}
-    </div>
-    <!-- best_container -->
+
     <input type="file" class="real-upload" accept="image/*" required multiple>
     <div class="upload"><p class="new">New</p></div>
     <div id="img_container">
-    <ul class="image-preview"></ul>
+        <ul class="image-preview"></ul>
     </div>
+
+    <!-- main_container -->
+    <div id="main">
+        {% for post in photo_list %}
+        <div class="mainBox">
+            {% if post.photo %}
+                <img class="memo_photo" width="450" src="{{ post.photo.url }}"/>
+            {% else %}
+                No Photo
+            {% endif %}
+            <div class="memoBox">
+                <h3 class="bo">burger</h3>
+                <p class="bo">haha</p>
+                <div class="view-photo">
+                    <a href="{{ post.get_absolute_url }} ">
+                        {{ post.title }}
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- main_container -->
+
     <script src="https://kit.fontawesome.com/54ae93b2e8.js" crossorigin="anonymous"></script>
     <script src="{% static "js/photo_board.js" %}" defer></script>
 {% endblock content %}

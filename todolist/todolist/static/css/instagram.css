@@ -1,66 +1,8 @@
 body{
 	background-color: #fafafa;
-	padding: 60px;
 	font-family: 'Droid Sans', sans-serif;
 
 }
-
-/*navbar*/
-
-.navbar {
-    max-width: 600px;
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 12px;
-    margin-right: auto;
-    margin-left: auto;
-
-  }
-  
-  a {
-    color: black;
-    text-decoration: none;
-  }
-  
-  .nav_menu1 {
-    padding-left: 10px;
-    font-size: 26px;
-  }
-  .nav_menu1 i {
-    color: #54248f;
-  }
-  
-  .navbar_menu {
-    display: flex;
-    padding-left: 0;
-  }
-  .navbar_menu li {
-    font-size: 20px;
-    padding: 8px 12px;
-    list-style: none;
-  }
-  
-  .navbar_icons {
-    list-style: none;
-    color: black;
-    display: flex;
-    padding-left: 0;
-  }
-  .navbar_icons i {
-    padding: 8px 12px;
-  }
-  
-  .navbar_toogleBtn {
-    display: none;
-    position: absolute;
-    right: 32px;
-    font-size: 24px;
-    color: #54248f;
-  }
-  
-/*navbar*/
 
 /* instagram-content */
 a{
@@ -78,11 +20,13 @@ img {
 	width: 100%;
 	max-width: 600px;
 	margin: auto;
+  
 }
 
 .instagram-card-header{
 	padding: 20px;
 	height: 40px;
+  margin-bottom: 40px;
 }
 
 .instagram-card-user-image{

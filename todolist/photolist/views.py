@@ -21,6 +21,7 @@ def photo_list(request):
     })
 
 class PostDetailView(DetailView):
+    template_name = 'photolist/photo_detail.html'
     model = Post
     # queryset = Post.objects.filter(is_public=True)
 
