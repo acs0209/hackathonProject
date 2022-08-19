@@ -12,8 +12,6 @@ def photo_list(request):
     q = request.GET.get('q', '')
     if q:
         qs = qs.filter(title__icontains=q)
-
-    messages.info(request, 'messages 테스트')
     # instagram/templates/instagram/post_list.html
     return render(request, 'photolist/photo_list.html', {
         'photo_list': qs,
@@ -67,8 +65,11 @@ def post_new(request):
         if form.is_valid():
             # 저장하라
             form.save()
-            return redirect('')
+            messages.success(request, "정상적으로 포스팅 되었습니다.")
+            return redirect('photolist:photo_list')
     else:
         # 입력을 받을 수 있는 html을 갖다주기
         form = PostForm() #객체 만들어주기
-    return render(request, 'photolist/post_create.html',{'form': form})
+    return render(request, 'photolist/post_create.html', {
+        'form': form,
+        })
