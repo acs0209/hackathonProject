@@ -70,6 +70,6 @@ def post_new(request):
     else:
         # 입력을 받을 수 있는 html을 갖다주기
         form = PostForm() #객체 만들어주기
-    return render(request, 'photolist/post_create.html', {
+    return render(request, 'photolist/post_form.html', {
         'form': form,
         })
