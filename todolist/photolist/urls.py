@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from django.conf.urls.static import static
 
 app_name = 'photolist'  # URL Reverse에서 namespace역할을 함
 
