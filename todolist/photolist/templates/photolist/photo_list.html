@@ -56,7 +56,9 @@
     <!-- 여기에 맛집 top3을 넣어야 합니다. -->
 
     <!-- best_container -->
-    <div class="upload"><p class="new"><a  href="{% url 'photolist:post_new' %}">New</a></p></div>
+    <div class="upload"><p class="new"><a href="{% url "photolist:post_new" %}">New</a></p></div>
+    
+    <a href="{% url 'photolist:post_new' %}">New22</a>
 
     <!-- main_container -->
     <div id="main">
@@ -68,7 +70,7 @@
                 No Photo
             {% endif %}
             <div class="memoBox">
-                <h3 class="bo">burger</h3>
+                <h3 class="bo">{{  }}</h3>
                 <p class="bo">haha</p>
                 <div class="view-photo">
                     <a href="{{ post.get_absolute_url }} ">
